@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology in Marketing & Ethics - Daily Lesson Plan 8</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        montanoBlue: '#1269A8',
+                        montanoYellow: '#F7D615',
+                        montanoGreen: '#54887D',
+                        montanoLightBlue: '#88B5C7',
+                        montanoOlive: '#A6B046',
+                        montanoBg: '#F2F5E9'
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F2F5E9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .tab-btn.active {
+            background-color: #1269A8;
+            color: #ffffff;
+            border-bottom: 4px solid #F7D615;
+            transform: translateY(-2px);
+        }
+        .board-card {
+            background: #ffffff;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            border: 2px solid #88B5C7;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-800 flex flex-col justify-between p-2 md:p-6">
+
+    <!-- TOP HEADER / BANNER -->
+    <header class="board-card rounded-2xl p-4 md:p-6 mb-6 relative overflow-hidden bg-white">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 border-b-2 border-gray-100 pb-4">
+            <!-- Colegio Montano Branding -->
+            <div class="flex items-center gap-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyEop0yf6lZ7Jk9MILZxF1rBj4Oqs5esyhIQ&s" 
+                     alt="Colegio Montano Logo" 
+                     class="h-16 w-auto object-contain rounded-lg shadow-sm"
+                     onerror="this.src='https://placehold.co/120x60/1269A8/ffffff?text=Montano'">
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-bold text-montanoBlue tracking-tight">COLEGIO MONTANO</h1>
+                    <p class="text-xs md:text-sm font-semibold text-montanoGreen tracking-wide uppercase">Interactive Digital Classroom Board</p>
+                </div>
+            </div>
+
+            <!-- Action Controls -->
+            <div class="flex items-center gap-3">
+                <button onclick="toggleFullScreen()" class="flex items-center gap-2 bg-montanoBlue hover:bg-opacity-90 text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-200 text-sm">
+                    <i class="fa-solid fa-expand"></i>
+                    <span>Fullscreen</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Class Plan Metadata -->
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 mt-4 text-xs md:text-sm">
+            <div class="bg-blue-50 p-2.5 rounded-lg border border-blue-100">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Course</span>
+                <span class="font-semibold text-gray-700">Psychology</span>
+            </div>
+            <div class="bg-blue-50 p-2.5 rounded-lg border border-blue-100">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Grade</span>
+                <span class="font-semibold text-gray-700">5to Mercadotecnia</span>
+            </div>
+            <div class="bg-blue-50 p-2.5 rounded-lg border border-blue-100">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Unit / Plan</span>
+                <span class="font-semibold text-gray-700">Unit 1 - Plan #8</span>
+            </div>
+            <div class="bg-blue-50 p-2.5 rounded-lg border border-blue-100">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Date</span>
+                <span class="font-semibold text-gray-700">March 8 - 12</span>
+            </div>
+            <div class="bg-blue-50 p-2.5 rounded-lg border border-blue-100 col-span-2 md:col-span-1">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Teacher</span>
+                <span class="font-semibold text-gray-700">Elysa López</span>
+            </div>
+            <div class="bg-yellow-50 p-2.5 rounded-lg border border-yellow-200 col-span-2 md:col-span-2">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Topic</span>
+                <span class="font-bold text-montanoBlue">Psychology in Marketing & Ethics</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- PEDAGOGICAL ALIGNMENT COLLAPSIBLE SUMMARY -->
+    <section class="mb-6">
+        <details class="board-card rounded-2xl bg-white overflow-hidden group">
+            <summary class="p-4 font-bold text-montanoBlue cursor-pointer flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition">
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-graduation-cap text-montanoOlive"></i>
+                    Pedagogical Framework & Institution Alignment (CNB Guatemala & Montano Habits)
+                </span>
+                <i class="fa-solid fa-chevron-down text-montanoBlue group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="p-5 grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-gray-100 text-xs md:text-sm">
+                <div class="space-y-2">
+                    <h4 class="font-bold text-montanoGreen flex items-center gap-1.5">
+                        <i class="fa-solid fa-bullseye"></i> CNB Competence & Achievement
+                    </h4>
+                    <p class="text-gray-600"><strong>Competence:</strong> Integrates psychological mechanisms of consumer behavior to design ethical marketing strategies while distinguishing persuasion from manipulation.</p>
+                    <p class="text-gray-600"><strong>Learning Outcome:</strong> Evaluates commercial campaigns using cognitive drivers (perception, attention, motivation, learning, social influence) and defends ethical boundary standards.</p>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="font-bold text-montanoGreen flex items-center gap-1.5">
+                        <i class="fa-solid fa-brain"></i> Key Competencies & Montano Habits
+                    </h4>
+                    <p class="text-gray-600"><strong>Skills:</strong> Ethical Reasoning, Peer Assessment, Campaign Synthesis, Analytical Communication.</p>
+                    <p class="text-gray-600"><strong>Montano Habits:</strong> <em>Think Win-Win</em> (balancing commercial impact with consumer trust) & <em>Sharpen the Saw</em> (refining Activity 3 and organizing portfolio evidence).</p>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="font-bold text-montanoGreen flex items-center gap-1.5">
+                        <i class="fa-solid fa-box-open"></i> Resources & Assessment
+                    </h4>
+                    <p class="text-gray-600"><strong>Resources:</strong> Sample Ad Case Cards, Ethical Persuasion Checklist, Activity 3 Portfolio Folder, Interactive Plenary Rubric.</p>
+                    <p class="text-gray-600"><strong>3 Assessment Moments:</strong> Ad Analysis Hook (Initial), 3-Concept Campaign Audit (Formative), Peer Feedback & Portfolio Check (Summative).</p>
+                </div>
+            </div>
+        </details>
+    </section>
+
+    <!-- MAIN PEDAGOGICAL SEQUENCE (TABS) -->
+    <main class="board-card rounded-2xl p-4 md:p-6 mb-6 bg-white flex-grow">
+        <!-- TAB NAVIGATION -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-6 border-b border-gray-200 pb-4">
+            <button onclick="switchTab(1)" id="tab-btn-1" class="tab-btn active p-3 rounded-xl font-bold text-sm md:text-base flex flex-col items-center justify-center gap-1 transition-all bg-gray-100 text-gray-700">
+                <span class="text-xs uppercase tracking-wider text-montanoYellow font-black">Stage I (~5 min)</span>
+                <span><i class="fa-solid fa-rectangle-ad mr-1"></i> Ad Hook & Analysis</span>
+            </button>
+            <button onclick="switchTab(2)" id="tab-btn-2" class="tab-btn p-3 rounded-xl font-bold text-sm md:text-base flex flex-col items-center justify-center gap-1 transition-all bg-gray-100 text-gray-700">
+                <span class="text-xs uppercase tracking-wider text-montanoYellow font-black">Stage II (30 min)</span>
+                <span><i class="fa-solid fa-scale-balanced mr-1"></i> Concepts & Ethics</span>
+            </button>
+            <button onclick="switchTab(3)" id="tab-btn-3" class="tab-btn p-3 rounded-xl font-bold text-sm md:text-base flex flex-col items-center justify-center gap-1 transition-all bg-gray-100 text-gray-700">
+                <span class="text-xs uppercase tracking-wider text-montanoYellow font-black">Stage III (15 min)</span>
+                <span><i class="fa-solid fa-users-gear mr-1"></i> Team Campaign Audit</span>
+            </button>
+            <button onclick="switchTab(4)" id="tab-btn-4" class="tab-btn p-3 rounded-xl font-bold text-sm md:text-base flex flex-col items-center justify-center gap-1 transition-all bg-gray-100 text-gray-700">
+                <span class="text-xs uppercase tracking-wider text-montanoYellow font-black">Stage IV (10 min)</span>
+                <span><i class="fa-solid fa-folder-check mr-1"></i> Peer Review & Portfolio</span>
+            </button>
+        </div>
+
+        <!-- TAB CONTENT CONTAINER -->
+        <div id="tab-contents">
+            <!-- STAGE I: AD HOOK & ANALYSIS -->
+            <div id="tab-1" class="tab-content space-y-6">
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-montanoBlue p-5 rounded-r-xl">
+                    <h3 class="text-xl font-bold text-montanoBlue mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-magnifying-glass text-montanoYellow"></i> Stage I: Analyze an Advertisement (~5 Minutes)
+                    </h3>
+                    <p class="text-gray-700 text-sm md:text-base">
+                        <strong>Warm-up Prompt:</strong> <em>"Look at this fitness brand advertisement: 'Lose 20 lbs in 7 days guaranteed without exercise or diet changes!' Is this persuasive marketing or unethical manipulation?"</em>
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Sample Ad Card -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="bg-red-100 text-red-700 text-xs font-bold px-2.5 py-1 rounded uppercase">Case Sample</span>
+                            <h4 class="font-bold text-gray-800 text-base mt-2">"Miracle Fit 7-Day Secret"</h4>
+                            <p class="text-xs text-gray-600 mt-2">Includes countdown timer ("Only 3 bottles left in stock!"), fake doctor testimonials, and photoshopped before/after images.</p>
+                        </div>
+                        <button onclick="toggleAnswer('hook-8')" class="mt-4 bg-montanoOlive text-white font-semibold py-2 rounded-lg hover:bg-opacity-90 transition text-sm">
+                            Show Ethical Audit
+                        </button>
+                    </div>
+
+                    <!-- Hidden Audit Result -->
+                    <div id="hook-8" class="hidden bg-gray-50 p-5 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <h4 class="font-bold text-montanoBlue mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-triangle-exclamation text-amber-500"></i> Diagnosis: Misleading Manipulation
+                            </h4>
+                            <ul class="text-xs text-gray-700 space-y-2">
+                                <li><strong>Manipulated Mechanisms:</strong> Scarcity bias (fake timer), false social proof (fake doctor), unrealistic outcome expectations.</li>
+                                <li><strong>Ethical Breach:</strong> Deceives consumer understanding, exploits cognitive vulnerabilities, and violates truth-in-advertising principles.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAGE II: CONCEPTS & ETHICS -->
+            <div id="tab-2" class="tab-content hidden space-y-6">
+                <div class="bg-gradient-to-r from-emerald-50 to-teal-50 border-l-4 border-montanoGreen p-5 rounded-r-xl">
+                    <h3 class="text-xl font-bold text-montanoGreen mb-1 flex items-center gap-2">
+                        <i class="fa-solid fa-scale-balanced"></i> Stage II: Direct Instruction - Concepts & Ethical Boundaries (~30 Minutes)
+                    </h3>
+                    <p class="text-gray-700 text-sm">15 min Identifying 7 Psychological Concepts in Ads | 15 min Persuasion vs. Manipulation & Misleading Claims</p>
+                </div>
+
+                <!-- 7 Integrated Concepts Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-2 text-xs">
+                    <div class="p-2.5 bg-white rounded-lg border border-blue-100 text-center">
+                        <span class="font-bold text-montanoBlue block">1. Perception</span>
+                        <span class="text-[10px] text-gray-500">Sensory interpretation</span>
+                    </div>
+                    <div class="p-2.5 bg-white rounded-lg border border-blue-100 text-center">
+                        <span class="font-bold text-montanoBlue block">2. Attention</span>
+                        <span class="text-[10px] text-gray-500">Visual focal cues</span>
+                    </div>
+                    <div class="p-2.5 bg-white rounded-lg border border-blue-100 text-center">
+                        <span class="font-bold text-montanoBlue block">3. Motivation</span>
+                        <span class="text-[10px] text-gray-500">Needs & drives</span>
+                    </div>
+                    <div class="p-2.5 bg-white rounded-lg border border-blue-100 text-center">
+                        <span class="font-bold text-montanoBlue block">4. Learning</span>
+                        <span class="text-[10px] text-gray-500">Reinforcement habits</span>
+                    </div>
+                    <div class="p-2.5 bg-white rounded-lg border border-blue-100 text-center">
+                        <span class="font-bold text-montanoBlue block">5. Attitudes</span>
+                        <span class="text-[10px] text-gray-500">Brand evaluations</span>
+                    </div>
+                    <div class="p-2.5 bg-white rounded-lg border border-blue-100 text-center">
+                        <span class="font-bold text-montanoBlue block">6. Social Influence</span>
+                        <span class="text-[10px] text-gray-500">Norms & social proof</span>
+                    </div>
+                    <div class="p-2.5 bg-white rounded-lg border border-blue-100 text-center">
+                        <span class="font-bold text-montanoBlue block">7. Decision-Making</span>
+                        <span class="text-[10px] text-gray-500">Heuristics & choices</span>
+                    </div>
+                </div>
+
+                <!-- Persuasion vs. Manipulation Comparison -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
+                    <div class="bg-white p-5 rounded-xl border border-green-200 shadow-sm">
+                        <h4 class="font-bold text-montanoGreen text-base mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-green-600"></i> Ethical Persuasion
+                        </h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Provides honest, transparent product information.</li>
+                            <li>Helps consumers make informed decisions aligning with their true needs.</li>
+                            <li>Respects consumer autonomy and free will.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl border border-red-200 shadow-sm">
+                        <h4 class="font-bold text-red-700 text-base mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-xmark text-red-600"></i> Psychological Manipulation
+                        </h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Uses deceit, hidden terms, or manufactured panic/fear.</li>
+                            <li>Exploits cognitive biases (e.g., dark UX patterns, artificial scarcity).</li>
+                            <li>Prioritizes short-term sales over consumer well-being.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAGE III: TEAM CAMPAIGN AUDIT -->
+            <div id="tab-3" class="tab-content hidden space-y-6">
+                <div class="bg-gradient-to-r from-yellow-50 to-amber-50 border-l-4 border-montanoYellow p-5 rounded-r-xl">
+                    <h3 class="text-xl font-bold text-gray-800 mb-1 flex items-center gap-2">
+                        <i class="fa-solid fa-users-gear text-montanoBlue"></i> Stage III: Teams Analyze a Campaign (~15 Minutes)
+                    </h3>
+                    <p class="text-gray-700 text-sm">Teams of 4 select an assigned commercial campaign and audit it using at least THREE psychological concepts.</p>
+                </div>
+
+                <!-- Campaign Audit Task Matrix -->
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <h4 class="font-bold text-montanoBlue mb-3">Team Audit Worksheet</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-xs md:text-sm text-left border-collapse">
+                            <thead class="bg-montanoBlue text-white uppercase text-xs">
+                                <tr>
+                                    <th class="p-3 rounded-tl-lg">Campaign Element</th>
+                                    <th class="p-3">Psychological Concept Identified</th>
+                                    <th class="p-3">Mechanism Explanation</th>
+                                    <th class="p-3 rounded-tr-lg">Ethical Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 text-gray-700">
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-medium">Element 1: Visual Contrast & Colors</td>
+                                    <td class="p-3 font-bold text-montanoBlue">Attention / Perception</td>
+                                    <td class="p-3">Directs visual focus to call-to-action button using high contrast colors.</td>
+                                    <td class="p-3 text-green-600 font-bold">Ethical Persuasion</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-medium">Element 2: "9 out of 10 Dentists Agree"</td>
+                                    <td class="p-3 font-bold text-montanoGreen">Social Influence / Norms</td>
+                                    <td class="p-3">Triggers authority bias to build trust and reduce perceived risk.</td>
+                                    <td class="p-3 text-green-600 font-bold">Ethical Persuasion (if data is verified)</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-3 font-medium">Element 3: Hidden Auto-Renewal Subscription</td>
+                                    <td class="p-3 font-bold text-red-600">Decision-Making / Dark Pattern</td>
+                                    <td class="p-3">Exploits default bias and limited attention to lock consumers into recurring fees.</td>
+                                    <td class="p-3 text-red-600 font-bold">Unethical Manipulation</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAGE IV: PEER REVIEW & PORTFOLIO -->
+            <div id="tab-4" class="tab-content hidden space-y-6">
+                <div class="bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-montanoOlive p-5 rounded-r-xl">
+                    <h3 class="text-xl font-bold text-montanoBlue mb-1 flex items-center gap-2">
+                        <i class="fa-solid fa-folder-check text-montanoYellow"></i> Stage IV: Peer Feedback & Portfolio Evidence (~10 Minutes)
+                    </h3>
+                    <p class="text-gray-700 text-sm">5 min Peer Feedback Exchange + 5 min Revise Activity 3 & Organize Portfolio Evidence</p>
+                </div>
+
+                <!-- Peer Feedback Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                        <h4 class="font-bold text-montanoBlue mb-2 flex items-center gap-1.5">
+                            <i class="fa-solid fa-comments text-montanoGreen"></i> Peer Feedback Protocol (5 min)
+                        </h4>
+                        <p class="text-gray-600">Pair up with another team. Provide 1 praise point on their psychological concept identification and 1 suggestion on their ethical classification.</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                        <h4 class="font-bold text-montanoGreen mb-2 flex items-center gap-1.5">
+                            <i class="fa-solid fa-folder-open text-montanoOlive"></i> Portfolio Evidence Checkpoint (5 min)
+                        </h4>
+                        <p class="text-gray-600">Finalize revisions on <strong>Activity 3 (Ad Campaign Stereotype & Ethical Redesign)</strong> and archive all Unit 1 evidence in your digital portfolio.</p>
+                    </div>
+                </div>
+
+                <!-- Exit Ticket -->
+                <div class="bg-blue-50 p-5 rounded-xl border border-montanoLightBlue">
+                    <h4 class="font-bold text-montanoBlue text-sm mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-ticket"></i> 5-Minute Exit Ticket Prompt
+                    </h4>
+                    <p class="text-xs md:text-sm text-gray-700">Write 1 sentence: <strong>"What is the single most clear boundary line that separates ethical marketing persuasion from deceptive psychological manipulation?"</strong></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- INTERACTIVE PLENARY EVALUATION RUBRIC -->
+    <section class="board-card rounded-2xl p-4 md:p-6 bg-white">
+        <h3 class="text-lg font-bold text-montanoBlue mb-4 flex items-center gap-2 border-b pb-2">
+            <i class="fa-solid fa-clipboard-check text-montanoGreen"></i> Plenary Evaluation Rubric (Interactive Scoring Tool for Teacher)
+        </h3>
+        
+        <div class="overflow-x-auto">
+            <table class="w-full text-xs md:text-sm text-left border-collapse">
+                <thead class="bg-gray-100 text-montanoBlue uppercase font-bold text-xs">
+                    <tr>
+                        <th class="p-3 border">Criteria</th>
+                        <th class="p-3 border">Needs Improvement (1 pt)</th>
+                        <th class="p-3 border">Satisfactory (2 pts)</th>
+                        <th class="p-3 border">Exemplary (3 pts)</th>
+                        <th class="p-3 border text-center">Interactive Score</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y text-gray-700">
+                    <tr>
+                        <td class="p-3 font-bold border bg-gray-50">1. Concept Identification</td>
+                        <td class="p-3 border">Identifies fewer than 2 psychological concepts accurately.</td>
+                        <td class="p-3 border">Identifies 3 psychological concepts in the campaign correctly.</td>
+                        <td class="p-3 border">Deconstructs campaign using 3+ concepts with precise psychological vocabulary.</td>
+                        <td class="p-3 border text-center">
+                            <select onchange="calculateRubricScore()" class="rubric-score bg-blue-50 border border-blue-200 rounded p-1 font-bold text-montanoBlue">
+                                <option value="1">1 pt</option>
+                                <option value="2">2 pts</option>
+                                <option value="3" selected>3 pts</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 font-bold border bg-gray-50">2. Ethical Evaluation</td>
+                        <td class="p-3 border">Fails to distinguish persuasion from manipulation.</td>
+                        <td class="p-3 border">Distinguishes ethical persuasion from manipulation at a basic level.</td>
+                        <td class="p-3 border">Provides sharp ethical critique separating legitimate persuasion from deceptive manipulation.</td>
+                        <td class="p-3 border text-center">
+                            <select onchange="calculateRubricScore()" class="rubric-score bg-blue-50 border border-blue-200 rounded p-1 font-bold text-montanoBlue">
+                                <option value="1">1 pt</option>
+                                <option value="2">2 pts</option>
+                                <option value="3" selected>3 pts</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 font-bold border bg-gray-50">3. Peer Review & Portfolio</td>
+                        <td class="p-3 border">Incomplete peer feedback; Activity 3 portfolio unorganized.</td>
+                        <td class="p-3 border">Participated in peer feedback and organized basic portfolio evidence.</td>
+                        <td class="p-3 border">Delivered constructive peer feedback and submitted fully polished Activity 3 portfolio (Habit: Sharpen the Saw).</td>
+                        <td class="p-3 border text-center">
+                            <select onchange="calculateRubricScore()" class="rubric-score bg-blue-50 border border-blue-200 rounded p-1 font-bold text-montanoBlue">
+                                <option value="1">1 pt</option>
+                                <option value="2">2 pts</option>
+                                <option value="3" selected>3 pts</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 font-bold border bg-gray-50">4. Plenary Communication</td>
+                        <td class="p-3 border">Unclear presentation during campaign defense.</td>
+                        <td class="p-3 border">Explains campaign audit clearly using standard terminology.</td>
+                        <td class="p-3 border">Delivers crisp, persuasive, and ethical presentation with professional vocabulary.</td>
+                        <td class="p-3 border text-center">
+                            <select onchange="calculateRubricScore()" class="rubric-score bg-blue-50 border border-blue-200 rounded p-1 font-bold text-montanoBlue">
+                                <option value="1">1 pt</option>
+                                <option value="2">2 pts</option>
+                                <option value="3" selected>3 pts</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Rubric Total Result -->
+        <div class="mt-4 flex justify-between items-center bg-montanoBg p-3 rounded-xl border border-montanoOlive">
+            <span class="font-bold text-montanoBlue text-sm">Total Team Assessment Score:</span>
+            <span id="rubric-total" class="text-lg font-black text-montanoBlue bg-white px-4 py-1 rounded-lg border border-gray-200">12 / 12 pts</span>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-6 text-center text-xs text-gray-500 py-2">
+        Colegio Montano &copy; 2026 | Pedagogical Digital Board System | Model CNB Guatemala
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Tab Navigation Switcher
+        function switchTab(tabIndex) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(`tab-${tabIndex}`).classList.remove('hidden');
+            document.getElementById(`tab-btn-${tabIndex}`).classList.add('active');
+        }
+
+        // Toggle Hidden Solution / Content Accordion
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+            } else {
+                el.classList.add('hidden');
+            }
+        }
+
+        // Fullscreen Toggle Functionality
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.log(`Error attempting to enable full-screen mode: ${err.message}`);
+                });
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+
+        // Rubric Calculation Logic
+        function calculateRubricScore() {
+            const selects = document.querySelectorAll('.rubric-score');
+            let total = 0;
+            selects.forEach(select => {
+                total += parseInt(select.value, 10);
+            });
+            document.getElementById('rubric-total').innerText = `${total} / 12 pts`;
+        }
+    </script>
+</body>
+</html>
